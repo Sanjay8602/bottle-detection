@@ -46,6 +46,10 @@ def process_video():
                 if cls == 39:
                     cvzone.cornerRect(img, (x1, y1, w, h), colorR=(255, 0, 0))
 
+                    aspect_ratio = w / h
+                    if aspect_ratio < 0.4 or aspect_ratio > 1.5:  # Checking the deformity. If it is their then it will show in Deformity in Orange/red label
+                        cvzone.putTextRect(img, "Deformity", (x1, y1 - 10), scale=1.5, thickness=2, colorR=(0, 0, 255))
+
                    
                     part_height = h // 6
                     for i, part in enumerate(bottle_parts):
