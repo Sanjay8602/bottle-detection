@@ -1,58 +1,48 @@
 Bottle Detection System
-This project is a Bottle Detection System that uses a pre-trained YOLOv8 model to detect and label various parts of a bottle in real-time from a webcam feed. The system is capable of detecting bottles, recognizing text on the bottle label using OCR (Optical Character Recognition), and matching the detected brand with a list of known brands.
+Welcome to the Bottle Detection System! This project uses a webcam to detect bottles, label different parts of the bottle (like the cap, neck, body, and label), and even recognize the brand name on the bottle through text extracted from the label. It’s powered by AI and Optical Character Recognition (OCR), making it capable of identifying and labeling bottles in real-time! (but it is not that perfect)
 
-Key Features:
-Real-time bottle detection using YOLOv8.
-Labeling parts of the bottle: Cap, Neck, Body, Label, Base, and Deformity.
-Brand recognition using Tesseract OCR and fuzzy matching with a predefined list of known bottle brands.
-User-friendly GUI built using Tkinter.
+
+Bottle Detection: The system identifies bottles in the video feed from webcam.
+Part Labeling: It labels different parts of the bottle, such as the cap, neck, body, label, and base.
+Brand Recognition: Using OCR, it extracts text from the label and tries to match it to a list of known bottle brands like Aquafina, Bisleri, and more.
 Technologies Used:
-YOLOv8 (Ultralytics) for object detection.
-Tesseract OCR for Optical Character Recognition.
-FuzzyWuzzy for text matching and recognition.
-OpenCV for video processing and displaying images.
-Tkinter for GUI creation.
-Installation Instructions
-Install Python: Ensure you have Python 3.7+ installed on your system.
+YOLOv8: This is the AI model used to detect bottles in the video feed.
+Tesseract OCR: This tool reads the text on the bottle label.
+FuzzyWuzzy: It matches the text from the label to known bottle brands.
+OpenCV: Used to handle the video feed and display images.
+Tkinter: This is the graphical interface (GUI) that you interact with.
+Getting Started
+To run this system, you’ll need to set up a few things on your computer. 
 
-Install Required Packages: You need to install several Python packages. You can do this by running the following command:
+1. Install Python
+First, make sure you have Python 3.7+ installed on your computer. If not, you can download it from python.org.
+
+2. Install Dependencies
+You’ll need to install some Python packages. Open your command line or terminal and run this command:
 
 bash
 Copy
 Edit
-pip install opencv-python cvzone ultralytics pytesseract fuzzywuzzy pillow
-You may also need to install the tesseract executable. For Windows users, you can download it from here. After installation, make sure to add the path to the executable in the code:
+pip install -r requirements.txt
+3. Install Tesseract OCR
+Tesseract is the tool that reads the text on the bottle labels. If you're on Windows, you can download it from this link. After installing it, make sure you point the program to the correct path in the code. For example:
 
 python
 Copy
 Edit
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-Download YOLO Model Weights: Download the YOLOv8 model weights from here or use the one you have. Make sure to place it in the project directory under ./Yolo-Weights/yolov8l.pt.
+If you're on macOS or Linux, you can install Tesseract via a package manager (brew install tesseract on macOS, or apt-get install tesseract on Ubuntu).
 
-Download or Clone the Project: You can either download or clone this repository to your local machine.
+4. Download YOLO Model Weights
+You also need to download a pre-trained YOLOv8 model for detecting bottles. You can get it from here. Download the yolov8l.pt file and place it in a folder called Yolo-Weights inside your project directory.
 
-bash
-Copy
-Edit
-git clone <repository_url>
 Running the Project
-Start the GUI Application: To run the application, simply run the Python script:
+Once everything is set up, follow these steps:
+
+1. Launch the Program
+To run the system, simply run the Python script. Open a terminal, navigate to the folder containing the project, and type:
 
 bash
 Copy
 Edit
 python bottle_detection.py
-Using the GUI:
-
-When you launch the program, a window with a "Start" button will appear.
-Click "Start" to begin video capture and bottle detection.
-The webcam feed will display, and the program will start detecting bottles and label them with their respective parts.
-The OCR will extract text from the bottle label, and the system will try to match it to known bottle brands.
-The "Stop" button will halt the video feed and processing.
-Dependencies: Ensure you have all dependencies installed as mentioned above. If any additional issues arise, please consult the respective documentation for troubleshooting.
-
-
-Used Model:
-Ultralytics YOLO: For providing the pre-trained YOLOv8 model for object detection.
-Tesseract OCR: For the OCR engine to extract text from the bottle labels.
-FuzzyWuzzy: For the fuzzy matching algorithm to match OCR output with known brands.
