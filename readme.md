@@ -15,6 +15,10 @@ Brand Recognition: Using OCR, it extracts text from the label and tries to match
 4. OpenCV: Used to handle the video feed and display images.
 5. Tkinter: This is the graphical interface (GUI) that you interact with.
 
+##Installing:
+1. pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+2. Download YOLO Model Weights: Download the YOLOv8 model weights from here or use the one you have. Make sure to place it in the project directory under ./Yolo-Weights/yolov8l.pt.
+
 ##Getting Started
 1. Clone Repo:
 ```commandline 
@@ -24,10 +28,8 @@ git clone https://github.com/Sanjay8602/bottle-detection.git
 ```commandline 
 pip install -r requirements.txt
 ```
-3. Running the app on streamlit Locally: 
+3. Running the app on Locally: 
 ```commandline 
 python main.py
 ```
 
-3. Install Tesseract OCR
-Tesseract is the tool that reads the text on the bottle labels. If you're on Windows, you can download it from this link. After installing it, make sure you point the program to the correct path in the code.
