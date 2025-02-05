@@ -17,7 +17,7 @@ Brand Recognition: Using OCR, it extracts text from the label and tries to match
 
 ## Installing:
 1. pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-2. Download YOLO Model Weights: Download the YOLOv8 model weights from here or use the one you have. Make sure to place it in the project directory under ./Yolo-Weights/yolov8l.pt.
+2. Download YOLO Model Weights: Download the YOLOv8 model weights from https://yolov8.com . Make sure to place it in the project directory under ./Yolo-Weights/yolov8l.pt.
 
 ## Getting Started
 1. Clone Repo:
