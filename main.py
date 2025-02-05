@@ -18,7 +18,7 @@ model = YOLO("./Yolo-Weights/yolov8l.pt")
 
 bottle_parts = ["Cap", "Neck", "Body", "Label", "Base", "Deformity"]
 
-known_brands = ["Kinley",]
+known_brands = ["Aquafina", "Bisleri", "Kinley", "Evian", "Nestle", "Himalayan", "Smartwater", "Dasani", "Voss", "Perrier", "Dukes", "Railneer"]
 
 cap = None
 running = False
